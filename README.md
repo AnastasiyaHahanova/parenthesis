@@ -17,6 +17,10 @@ Nginx должен обрабатывать запросы не обращая �
 
 # Быстрый старт
 
-docker-compose up 
+```
+docker-compose up
+```
 
+```
 curl --location --request GET 'http://mysite.local/?string=(()))'
+```
