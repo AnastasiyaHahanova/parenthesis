@@ -29,10 +29,6 @@ class Validator
             return false;
         }
 
-        if ($symbols[0] === $closed) {
-            return true;
-        }
-
         foreach ($symbols as $symbol) {
             if ($symbol === $open) {
                 $check[] = $open;
