@@ -32,9 +32,14 @@ class Validator
         foreach ($symbols as $symbol) {
             if ($symbol === $open) {
                 $check[] = $open;
-            } elseif (empty($check)) {
-                return true;
-            } else {
+                continue;
+            }
+
+            if ($symbol === $closed) {
+                if (empty($check)) {
+                    return true;
+                }
+
                 array_pop($check);
             }
         }
